@@ -43,3 +43,18 @@ let genCharacter = [];
 let hero;
 
 
+// Function to generate a random character description
+
+function GenerateDescription(){
+    
+    characterName = document.getElementById("characterName").value;
+    isHero = Math.floor(Math.random() * 2) ? "true" : "false";
+    age = Math.floor(Math.random() * 99);
+    genCharacter[0] = specialPowers[Math.floor(Math.random() * 5)];
+    genCharacter[1] =  favoriteFood[Math.floor(Math.random() * 4)];
+    hero = isHero ? "is a Hero" : "is not a Hero"
+    desc = characterName + " is " + age + " years old, loves " + genCharacter[1] + ", has the power of " + genCharacter[0] + ", and " + hero;
+    
+    document.getElementById("characterDescription").textContent = desc;
+}
+
