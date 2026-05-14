@@ -67,3 +67,17 @@ function GenerateDescription(){
     document.getElementById("characterDescription").textContent = desc;
 }
 
+// Functions to update character's age
+function IncreaseAge(){
+    
+    
+    if(desc.length ==0 || desc.length == undefined ){
+        document.getElementById("characterDescription").textContent = "First Generate the description..";
+        return;
+    }
+    if(age<=98 ){
+      age++;
+    }
+
+}
+
