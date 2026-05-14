@@ -33,11 +33,28 @@ display the character's attributes in a creative and humorous way.
 */
 
 // Declare and initialize variables
-
+let characterName = ["Batman", "SpiderMan", "Hulk", "Super Girl"];
+let Age = Math.floor(Math.random() * 99);
+let isHero = false;
+let specialPowers= ["fly","invisibility", "run", "strong" , "elastic", "velocity"];
+let favoriteFood = ["Salad", "Fries", "Pancakes", "Pizza", "Cheesecake"];
+let desc = document.getElementById("characterDescription");
+let genCharacter = ["","","","",""];
 
 
 // Function to generate a random character description
+if(document.getElementById('generateButton').clicked == true){
 
+   GenerateDescription();
+}
+
+
+function GenerateDescription(){
+    
+    genCharacter[0] = characterName[Math.floor(Math.random() * 4)];
+    genCharacter[1] = 
+    desc.textContent =  characterName[Math.floor(Math.random() * 4)];
+}
 
 // Functions to update character's age
 
