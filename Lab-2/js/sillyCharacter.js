@@ -77,6 +77,8 @@ function IncreaseAge(){
     }
     if(age<=98 ){
       age++;
+        UpdateDescription(age);
+
     }
 
 }
@@ -90,9 +92,19 @@ function DecreaseAge(){
 
     if(age>0 ){
       age--;
+    UpdateDescription(age);
+
     }
 
 
 }
+
+// Function to update the character's description after changing age
+function UpdateDescription(age){
+    desc = characterName + " is " + age + " years old, loves " + genCharacter[1] + ", has the power of " + genCharacter[0] + ", and " + hero;
+    
+    document.getElementById("characterDescription").textContent = desc;
+}
+
 
 
