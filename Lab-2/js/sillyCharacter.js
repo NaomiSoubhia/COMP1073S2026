@@ -47,7 +47,16 @@ let hero;
 
 function GenerateDescription(){
     
+
     characterName = document.getElementById("characterName").value;
+
+    //Dont generate description if name intput is empty
+        if(characterName.length == undefined || characterName.length==0 ){
+        document.getElementById("characterDescription").textContent = "Enter the character name...";
+        return;
+    }
+
+
     isHero = Math.floor(Math.random() * 2) ? "true" : "false";
     age = Math.floor(Math.random() * 99);
     genCharacter[0] = specialPowers[Math.floor(Math.random() * 5)];
