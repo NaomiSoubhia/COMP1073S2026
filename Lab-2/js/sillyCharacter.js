@@ -81,3 +81,18 @@ function IncreaseAge(){
 
 }
 
+function DecreaseAge(){
+    
+    if(desc.length ==0 || desc.length == undefined ){
+        document.getElementById("characterDescription").textContent = "First Generate the description..";
+        return;
+    }
+
+    if(age>0 ){
+      age--;
+    }
+
+
+}
+
+
