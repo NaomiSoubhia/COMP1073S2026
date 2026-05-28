@@ -69,8 +69,6 @@ function GenerateDescription(){
 
 // Functions to update character's age
 function IncreaseAge(){
-    
-    
     if(desc.length ==0 || desc.length == undefined ){
         document.getElementById("characterDescription").textContent = "First Generate the description..";
         return;
@@ -78,9 +76,7 @@ function IncreaseAge(){
     if(age<=98 ){
       age++;
         UpdateDescription(age);
-
     }
-
 }
 
 function DecreaseAge(){
