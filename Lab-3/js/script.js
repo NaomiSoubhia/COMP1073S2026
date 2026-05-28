@@ -37,3 +37,12 @@ else if(missionProgress<70 && missionProgress>1 ){
     display.textContent="Mission In Progress";
 }
 
+// 5. MISSION COMPLETE
+// If:
+// missionProgress === 100
+// Display:
+// "Mission Complete Successfully"
+
+else if(missionProgress ===100){
+    display.textContent="Mission Complete Successfully";
+}
