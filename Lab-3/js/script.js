@@ -46,3 +46,14 @@ else if(missionProgress<70 && missionProgress>1 ){
 else if(missionProgress ===100){
     display.textContent="Mission Complete Successfully";
 }
+
+// 4. HIGH PROGRESS STATUS
+// If:
+// missionProgress > 70 AND enemyNearby is false
+// Display:
+// "Approaching Mission Completion"
+
+else if(missionProgress > 70 && enemyNearby=== false){
+    display.textContent="Approaching Mission Completion";
+}
+
