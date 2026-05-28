@@ -70,6 +70,15 @@ function changeRiskLevel(){
     riskLevelOutput.textContent = riskLevel[indexes[4]];
 }
 
+function reset(){
+    indexes = [-1,-1,-1,-1,-1];
+    riskLevelOutput.textContent= "Not Selected";
+    missionOutput.textContent = "Not Selected";
+    weaponOutput.textContent = "Not Selected";
+    locationOutput.textContent = "Not Selected";
+    agentOutput.textContent = "Not Selected";
+}
+ 
 
 
 //Buttons event listener
@@ -78,5 +87,8 @@ document.getElementById("locationBtn").addEventListener("click", changeLocation)
 document.getElementById("weaponBtn").addEventListener("click", changeWeapon);
 document.getElementById("missionBtn").addEventListener("click", changeMission);
 document.getElementById("riskBtn").addEventListener("click", changeRiskLevel);
+document.getElementById("resetBtn").addEventListener("click", reset);
+
+
 
 
