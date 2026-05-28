@@ -4,9 +4,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
     <script src="js/script.js" defer></script>
 </head>
 <body>
-    
+        <h1>Mission Control</h1>
+
+    <div class="container">
+
+        <div class="selection">
+            <button id="agentBtn">Agent Type</button>
+            <span id="agentOutput">Not Selected</span>
+        </div>
+
+        <div class="selection">
+            <button id="locationBtn">Mission Location</button>
+            <span id="locationOutput">Not Selected</span>
+        </div>
+
+        <div class="selection">
+            <button id="weaponBtn">Weapon Loadout</button>
+            <span id="weaponOutput">Not Selected</span>
+        </div>
+
+        <div class="selection">
+            <button id="missionBtn">Mission Objective</button>
+            <span id="missionOutput">Not Selected</span>
+        </div>
+
+        <div class="selection">
+            <button id="riskBtn">Risk Level</button>
+            <span id="riskOutput">Not Selected</span>
+        </div>
+
+        <hr>
+
+        <button id="launchBtn">Launch</button>
+        <button id="resetBtn">Reset</button>
+
+        <div id="message"></div>
+
+        <div id="missionBriefing">
+            <h2>Mission Briefing</h2>
+            <p id="briefingText"></p>
+        </div>
+
+    </div>
 </body>
 </html>
