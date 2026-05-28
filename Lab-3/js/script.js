@@ -27,3 +27,13 @@ else if(ammo < 5 || shield === false){
     display.textContent="Warning: Low Resources";
 }
 
+// 3. MID MISSION STATUS
+// If:
+// missionProgress is between 1 and 70
+// Display:
+// "Mission In Progress"
+
+else if(missionProgress<70 && missionProgress>1 ){
+    display.textContent="Mission In Progress";
+}
+
