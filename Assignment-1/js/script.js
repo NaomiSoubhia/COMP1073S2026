@@ -17,9 +17,9 @@ let indexes = [-1,-1,-1,-1,-1];
 // QuerySelector
 agentOutput = document.getElementById("agentOutput");
 locationOutput = document.getElementById("locationOutput");
+weaponOutput = document.getElementById("weaponOutput");
 
-
-//Function to change the agent, go throw the array
+//Function to change the agent, go throw the array and update the text
 function changeAgent(){
     if(indexes[0] === 4){
         indexes[0]= -1;
@@ -29,7 +29,7 @@ function changeAgent(){
     
 } 
 
-//Function to go throw the locations array
+//Function to go throw the locations array and update the text
 function changeLocation(){
      if(indexes[1] === 4){
         indexes[1]= -1;
@@ -39,9 +39,17 @@ function changeLocation(){
 }
 
 
-
+//Function that goes throw the weapon array and update the text
+function changeWeapon(){
+     if(indexes[2] === 4){
+        indexes[2]= -1;
+    }
+    indexes[2] ++;
+    weaponOutput.textContent = weapon[indexes[2]];
+}
 
 
 //Buttons event listener
 document.getElementById("agentBtn").addEventListener("click", changeAgent);
 document.getElementById("locationBtn").addEventListener("click", changeLocation);
+document.getElementById("weaponBtn").addEventListener("click", changeWeapon);
