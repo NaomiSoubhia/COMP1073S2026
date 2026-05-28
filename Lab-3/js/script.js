@@ -57,3 +57,10 @@ else if(missionProgress > 70 && enemyNearby=== false){
     display.textContent="Approaching Mission Completion";
 }
 
+// 6. DEFAULT STATE
+// If none of the above conditions match:
+// "System Stable"
+
+else{
+   display.textContent= "System Stable";
+}
