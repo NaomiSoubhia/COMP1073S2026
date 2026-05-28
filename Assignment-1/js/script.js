@@ -18,6 +18,8 @@ let indexes = [-1,-1,-1,-1,-1];
 agentOutput = document.getElementById("agentOutput");
 locationOutput = document.getElementById("locationOutput");
 weaponOutput = document.getElementById("weaponOutput");
+missionOutput = document.getElementById("missionOutput");
+
 
 //Function to change the agent, go throw the array and update the text
 function changeAgent(){
@@ -48,8 +50,20 @@ function changeWeapon(){
     weaponOutput.textContent = weapon[indexes[2]];
 }
 
+//Function that goes throw the mission array and update the text
+function changeMission(){
+     if(indexes[3] === 4){
+        indexes[3]= -1;
+    }
+    indexes[3] ++;
+    missionOutput.textContent = mission[indexes[3]];
+}
+
+
 
 //Buttons event listener
 document.getElementById("agentBtn").addEventListener("click", changeAgent);
 document.getElementById("locationBtn").addEventListener("click", changeLocation);
 document.getElementById("weaponBtn").addEventListener("click", changeWeapon);
+document.getElementById("missionBtn").addEventListener("click", changeMission);
+
