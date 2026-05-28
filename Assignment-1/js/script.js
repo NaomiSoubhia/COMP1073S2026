@@ -95,6 +95,23 @@ function launch() {
 
 }
 
+function random(){
+
+    //Random numbers
+    indexes[0] =  Math.floor(Math.random() * 5);
+    indexes[1] =  Math.floor(Math.random() * 5);
+    indexes[2] =  Math.floor(Math.random() * 5);
+    indexes[3] =  Math.floor(Math.random() * 5);
+    indexes[4] =  Math.floor(Math.random() * 5);
+
+    // Update in html
+    agentOutput.textContent = agentType[indexes[0]];
+    locationOutput.textContent = locations[indexes[1]];
+    weaponOutput.textContent = weapon[indexes[2]];
+    missionOutput.textContent = mission[indexes[3]];
+    riskLevelOutput.textContent = riskLevel[indexes[4]];
+}
+
 //Buttons event listener
 document.getElementById("agentBtn").addEventListener("click", changeAgent);
 document.getElementById("locationBtn").addEventListener("click", changeLocation);
@@ -103,6 +120,8 @@ document.getElementById("missionBtn").addEventListener("click", changeMission);
 document.getElementById("riskBtn").addEventListener("click", changeRiskLevel);
 document.getElementById("resetBtn").addEventListener("click", reset);
 document.getElementById("launchBtn").addEventListener("click", launch);
+document.getElementById("randomBtn").addEventListener("click", random);
+
 
 
 
