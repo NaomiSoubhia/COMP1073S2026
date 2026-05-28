@@ -19,6 +19,8 @@ agentOutput = document.getElementById("agentOutput");
 locationOutput = document.getElementById("locationOutput");
 weaponOutput = document.getElementById("weaponOutput");
 missionOutput = document.getElementById("missionOutput");
+riskLevelOutput = document.getElementById("riskOutput");
+
 
 
 //Function to change the agent, go throw the array and update the text
@@ -59,6 +61,15 @@ function changeMission(){
     missionOutput.textContent = mission[indexes[3]];
 }
 
+//Function that goes throw the risk level array and update the text
+function changeRiskLevel(){
+     if(indexes[4] === 4){
+        indexes[4]= -1;
+    }
+    indexes[4] ++;
+    riskLevelOutput.textContent = riskLevel[indexes[4]];
+}
+
 
 
 //Buttons event listener
@@ -66,4 +77,6 @@ document.getElementById("agentBtn").addEventListener("click", changeAgent);
 document.getElementById("locationBtn").addEventListener("click", changeLocation);
 document.getElementById("weaponBtn").addEventListener("click", changeWeapon);
 document.getElementById("missionBtn").addEventListener("click", changeMission);
+document.getElementById("riskBtn").addEventListener("click", changeRiskLevel);
+
 
