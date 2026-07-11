@@ -68,30 +68,45 @@ Post the URL to the assignment on Blackboard. -->
             </label>
         </fieldset>
 
+
         <fieldset>
-            <legend>Toppings</legend>
+            <legend>Toppings (Choose 2 to 5)</legend>
 
-            <fieldset>
-                <legend>Toppings (Choose 2 to 5)</legend>
-
-                <label><input type="checkbox" name="toppings" value="Pepperoni"> Pepperoni</label><br>
-                <label><input type="checkbox" name="toppings" value="Bacon"> Bacon</label><br>
-                <label><input type="checkbox" name="toppings" value="Chicken"> Chicken</label><br>
-                <label><input type="checkbox" name="toppings" value="Mushrooms"> Mushrooms</label><br>
-                <label><input type="checkbox" name="toppings" value="Green Peppers"> Green Peppers</label><br>
-                <label><input type="checkbox" name="toppings" value="Onions"> Onions</label><br>
-                <label><input type="checkbox" name="toppings" value="Black Olives"> Black Olives</label><br>
-                <label><input type="checkbox" name="toppings" value="Corns"> Corns</label>
-            </fieldset>
+            <label><input type="checkbox" name="toppings" value="Pepperoni"> Pepperoni</label><br>
+            <label><input type="checkbox" name="toppings" value="Bacon"> Bacon</label><br>
+            <label><input type="checkbox" name="toppings" value="Chicken"> Chicken</label><br>
+            <label><input type="checkbox" name="toppings" value="Mushrooms"> Mushrooms</label><br>
+            <label><input type="checkbox" name="toppings" value="Green Peppers"> Green Peppers</label><br>
+            <label><input type="checkbox" name="toppings" value="Onions"> Onions</label><br>
+            <label><input type="checkbox" name="toppings" value="Black Olives"> Black Olives</label><br>
+            <label><input type="checkbox" name="toppings" value="Corns"> Corns</label>
         </fieldset>
+
 
         <fieldset>
             <legend>Extras</legend>
 
             <label><input type="checkbox"> Garlic Bread</label><br>
             <label><input type="checkbox"> Chicken Wings</label><br>
-            <label><input type="checkbox"> Soft Drink</label>
+            <label><input type="checkbox" id="softDrink" name="extras" value="Soft Drink"> Soft Drink </label>
         </fieldset>
+
+        <!-- Choose the soft drink  -->
+
+        <div id="drinkOptions" style="display: none;">
+            <fieldset>
+                <label>
+                    Choose your drink:
+                    <select id="drink">
+                        <option value="Coke">Coke</option>
+                        <option value="Pepsi">Pepsi</option>
+                        <option value="Sprite">Sprite</option>
+                        <option value="Water">Water</option>
+                    </select>
+                </label>
+            </fieldset>
+        </div>
+
 
         <fieldset>
             <legend>Delivery Method</legend>
@@ -99,6 +114,8 @@ Post the URL to the assignment on Blackboard. -->
             <label><input type="radio" name="delivery" checked> Delivery</label><br>
             <label><input type="radio" name="delivery"> Pickup</label>
         </fieldset>
+
+
 
         <fieldset>
             <legend>Special Instructions</legend>
