@@ -52,19 +52,19 @@ Post the URL to the assignment on Blackboard. -->
 
             <label>
                 Size
-                <select>
-                    <option>Small</option>
-                    <option>Medium</option>
-                    <option>Large</option>
+                <select  id="size">
+                    <option  value="Small">Small</option>
+                    <option  value="Medium">Medium</option>
+                    <option value="Large">Large</option>
                 </select>
             </label>
 
             <label>
                 Crust
-                <select>
-                    <option>Thin</option>
-                    <option>Regular</option>
-                    <option>Stuffed</option>
+                <select id="crust">
+                    <option value="Thin">Thin</option>
+                    <option value="Regular">Regular</option>
+                    <option value="Stuffed">Stuffed</option>
                 </select>
             </label>
         </fieldset>
@@ -87,8 +87,8 @@ Post the URL to the assignment on Blackboard. -->
         <fieldset>
             <legend>Extras</legend>
 
-            <label><input type="checkbox"> Garlic Bread</label><br>
-            <label><input type="checkbox"> Chicken Wings</label><br>
+            <label><input type="checkbox"  name="extras" value="Garlic Bread"> Garlic Bread</label><br>
+            <label><input type="checkbox" name="extras" value="Chicken Wings"> Chicken Wings</label><br>
             <label><input type="checkbox" id="softDrink" name="extras" value="Soft Drink"> Soft Drink </label>
         </fieldset>
 
