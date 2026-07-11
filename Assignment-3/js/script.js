@@ -74,12 +74,34 @@ function validateForm(event) {
         return;
     }
 
+    //Checking the toppings
     const toppings = document.querySelectorAll('input[name="toppings"]:checked');
 
     if (toppings.length < 2 || toppings.length > 5 ) {
         alert("Please select at least 2 toppings and no more than 5");
         return;
     }
+
+
+ // Capture pizza details
+const size = document.getElementById("size").value;
+const crust = document.getElementById("crust").value;
+
+const selectedToppings = Array.from(toppings).map(topping => topping.value);
+
+
+// Capture extras
+const extras = Array.from(
+    document.querySelectorAll('input[name="extras"]:checked')
+).map(extra => extra.value);
+
+
+// Capture drink if selected
+let drink = "";
+
+if (softDrinkCheckbox.checked) {
+    drink = document.getElementById("drink").value;
+}
 
 }
 
