@@ -103,7 +103,21 @@ if (softDrinkCheckbox.checked) {
     drink = document.getElementById("drink").value;
 }
 
+// Create Pizza object
+const pizzaOrder = new Pizza(
+    customerName,
+    phone,
+    customerAddress,
+    size,
+    crust,
+    selectedToppings,
+    extras,
+    drink
+);
 
+document.getElementById("orderResult").textContent = pizzaOrder.getDescription();
+
+alert("Order placed successfully!");
 
 }
 

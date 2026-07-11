@@ -62,3 +62,7 @@ body {
             color: navy;
         }
 
+#orderResult{
+    margin: 2rem 0;
+    color: firebrick;
+}
