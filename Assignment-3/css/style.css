@@ -1,0 +1,57 @@
+body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+            margin: 30px;
+        }
+
+        .container {
+            max-width: 700px;
+            margin: auto;
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,.2);
+        }
+
+        h1 {
+            color: darkred;
+            text-align: center;
+        }
+
+        fieldset {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+
+        input[type="text"],
+        input[type="tel"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+        }
+
+        button {
+            background-color: darkred;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: firebrick;
+        }
+
+        #studentInfo {
+            text-align: center;
+            font-weight: bold;
+            color: navy;
+        }
+
