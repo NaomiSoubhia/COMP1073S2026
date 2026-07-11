@@ -1,3 +1,4 @@
 {
-    "livePreview.defaultPreviewPath": "/Assignment-3/index.html"
+    "livePreview.defaultPreviewPath": "/Assignment-3/index.html",
+    "liveServer.settings.port": 5501
 }
