@@ -27,13 +27,20 @@ body {
             margin-top: 10px;
         }
 
+        .customerInfos label, .pizzaDetails label{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 20px;
+
+        }
+
         input[type="text"],
         input[type="tel"],
         select,
         textarea {
-            width: 100%;
+            width: 60%;
             padding: 8px;
-            margin-top: 5px;
         }
 
         button {

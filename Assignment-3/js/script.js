@@ -4,7 +4,26 @@ const studentId = "200645137";
 let naomiInfos =  document.getElementById("naomiInfos");
 naomiInfos.textContent = `Name: ${name} | Student ID: ${studentId}`;
 
+
+//Showing the drinks if the checkbox is selected
+const softDrinkCheckbox = document.getElementById("softDrink");
+const drinkOptions = document.getElementById("drinkOptions");
+
+softDrinkCheckbox.addEventListener("change", function () {
+
+    if (softDrinkCheckbox.checked) {
+        drinkOptions.style.display = "block";
+    } else {
+        drinkOptions.style.display = "none";
+    }
+
+});
+
+
+
+
 const form = document.getElementById("pizzaForm");
+
 
 form.addEventListener("submit", validateForm);
 
