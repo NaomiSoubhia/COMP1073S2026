@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="css/style.css">
     <script src="js/script.js" defer></script>
 </head>
+
 <body>
     <!-- Build a simple HTML form that you think would be appropriate for a customer to order a pizza. Dynamically add your student id and name somewhere on the page using a p tag and JavaScript.
 Be creative – what different options might you want your customers to have?
@@ -21,9 +23,9 @@ Upload your application to a live website. (GitHub Pages or any other that works
 Post the URL to the assignment on Blackboard. -->
 
 
-<p id="naomiInfos"></p>
+    <p id="naomiInfos"></p>
 
-    <form id="pizzaForm" >
+    <form id="pizzaForm">
 
         <fieldset>
             <legend>Customer Information</legend>
@@ -69,13 +71,18 @@ Post the URL to the assignment on Blackboard. -->
         <fieldset>
             <legend>Toppings</legend>
 
-            <input type="checkbox"> Pepperoni<br>
-            <input type="checkbox"> Bacon<br>
-            <input type="checkbox"> Chicken<br>
-            <input type="checkbox"> Mushrooms<br>
-            <input type="checkbox"> Green Peppers<br>
-            <input type="checkbox"> Onions<br>
-            <input type="checkbox"> Black Olives<br>
+            <fieldset>
+                <legend>Toppings (Choose 2 to 5)</legend>
+
+                <label><input type="checkbox" name="toppings" value="Pepperoni"> Pepperoni</label><br>
+                <label><input type="checkbox" name="toppings" value="Bacon"> Bacon</label><br>
+                <label><input type="checkbox" name="toppings" value="Chicken"> Chicken</label><br>
+                <label><input type="checkbox" name="toppings" value="Mushrooms"> Mushrooms</label><br>
+                <label><input type="checkbox" name="toppings" value="Green Peppers"> Green Peppers</label><br>
+                <label><input type="checkbox" name="toppings" value="Onions"> Onions</label><br>
+                <label><input type="checkbox" name="toppings" value="Black Olives"> Black Olives</label><br>
+                <label><input type="checkbox" name="toppings" value="Corns"> Corns</label>
+            </fieldset>
         </fieldset>
 
         <fieldset>
@@ -103,7 +110,8 @@ Post the URL to the assignment on Blackboard. -->
 
     </form>
 
-</div>
+    </div>
 
 </body>
+
 </html>

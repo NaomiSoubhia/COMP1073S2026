@@ -20,6 +20,7 @@ function validateForm(event) {
         return;
     }
 
+    //Customer Name needs to have 2 characters or more 
     const customerName = document
         .getElementById("customerName")
         .value
@@ -30,7 +31,7 @@ function validateForm(event) {
         return;
     }
 
-
+   //Customer Address needs to have 2 characters or more 
     const customerAddress = document
         .getElementById("customerAddress")
         .value
@@ -40,6 +41,7 @@ function validateForm(event) {
         return;
     }
 
+    //Phone needs to have 10 numbers
     const phone = document
         .getElementById("phone")
         .value
@@ -47,10 +49,17 @@ function validateForm(event) {
 
     const phonePattern = /^[0-9]{10}$/;
 
+    //Check the pattern and show alert
     if (!phonePattern.test(phone)) {
         alert("Please enter a valid 10-digit phone number.");
         return;
     }
 
+    const toppings = document.querySelectorAll('input[name="toppings"]:checked');
+
+    if (toppings.length < 2 || toppings.length > 5 ) {
+        alert("Please select at least 2 toppings and no more than 5");
+        return;
+    }
 
 }
