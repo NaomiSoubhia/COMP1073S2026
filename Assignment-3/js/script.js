@@ -103,10 +103,13 @@ if (softDrinkCheckbox.checked) {
     drink = document.getElementById("drink").value;
 }
 
+
+
 }
 
 class Pizza {
 
+// Atributes
 name;
 phone;
 address;
@@ -116,6 +119,7 @@ toppings;
 extras; 
 drink;
 
+// Constructor
 constructor(name, phone, address, size, crust, toppings, extras, drink) {
         this.name = name;
         this.phone = phone;
@@ -125,6 +129,44 @@ constructor(name, phone, address, size, crust, toppings, extras, drink) {
         this.toppings = toppings;
         this.extras = extras;
         this.drink = drink;
+
+ }
+
+ //Method to get the description
+   getDescription() {
+
+        let description = `
+        Customer: ${this.name}
+        Phone: ${this.phone}
+        Address: ${this.address}
+
+        Pizza:
+        Size: ${this.size}
+        Crust: ${this.crust}
+        Toppings: ${this.toppings.join(", ")}
+        `;
+
+
+        if (this.extras.length > 0) {
+            description += `
+            Extras: ${this.extras.join(", ")}
+            `;
+        }
+
+
+        if (this.drink !== "") {
+            description += `
+            Drink: ${this.drink}
+            `;
+        }
+
+
+        return description;
     }
     
 }
+
+
+
+
+
