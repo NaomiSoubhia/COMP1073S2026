@@ -23,24 +23,24 @@ Post the URL to the assignment on Blackboard. -->
 
 <p id="naomiInfos"></p>
 
-    <form>
+    <form id="pizzaForm" >
 
         <fieldset>
             <legend>Customer Information</legend>
 
             <label>
                 Full Name
-                <input type="text" name="name" required>
+                <input type="text" name="name" id="customerName" required>
             </label>
 
             <label>
                 Phone Number
-                <input type="tel" name="phone" required>
+                <input type="tel" name="phone" id="phone" required>
             </label>
 
             <label>
                 Delivery Address
-                <textarea rows="3"></textarea>
+                <textarea rows="3" id="customerAddress" required></textarea>
             </label>
         </fieldset>
 
@@ -75,7 +75,7 @@ Post the URL to the assignment on Blackboard. -->
             <input type="checkbox"> Mushrooms<br>
             <input type="checkbox"> Green Peppers<br>
             <input type="checkbox"> Onions<br>
-            <input type="checkbox"> Black Olives
+            <input type="checkbox"> Black Olives<br>
         </fieldset>
 
         <fieldset>
