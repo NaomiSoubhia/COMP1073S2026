@@ -105,3 +105,26 @@ if (softDrinkCheckbox.checked) {
 
 }
 
+class Pizza {
+
+name;
+phone;
+address;
+size;
+crust;
+toppings;
+extras; 
+drink;
+
+constructor(name, phone, address, size, crust, toppings, extras, drink) {
+        this.name = name;
+        this.phone = phone;
+        this.address = address;
+        this.size = size;
+        this.crust = crust;
+        this.toppings = toppings;
+        this.extras = extras;
+        this.drink = drink;
+    }
+    
+}
