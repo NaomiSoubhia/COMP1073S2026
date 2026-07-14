@@ -62,6 +62,7 @@ function showTopFlavors(json){
         let p1 = document.createElement("p"); // <p></p>
         let p2 = document.createElement("p"); // <p></p>
         let list = document.createElement("ul"); // <ul></ul>
+        let p3 = document.createElement("p"); // <p></p>
 
         // STEP 10f: Set the textContent property for each of the above elements (except the UL), based on the JSON content
         h2.textContent = topFlavors[i].name;
@@ -77,11 +78,12 @@ function showTopFlavors(json){
             listItem.textContent = ingredients[j];
             list.appendChild(listItem);
         }
-        
+        p3.textContent = "Rating: " + topFlavors[i].rating;
         // STEP 10i: Append each complete ARTICLE element to the SECTION element
         article.appendChild(h2);
         article.appendChild(p1);
         article.appendChild(p2);
+         article.appendChild(p3);
         article.appendChild(list);
         article.appendChild(image);
         

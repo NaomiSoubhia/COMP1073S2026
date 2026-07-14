@@ -9,19 +9,23 @@
         "calories": 200,
         "type": "Icecream",
         "ingredients": ["Chocolate Syrup", "Peppermint Sprinkle", "Vanilla Base"],
-        "image": "https://priyansht.github.io/26S-JavaScript-02-Week10/images/chocolate-mint.svg"
+        "image": "https://priyansht.github.io/26S-JavaScript-02-Week10/images/chocolate-mint.svg",
+         "rating": 4.5
     }, {
         "name": "Peach Mango",
         "calories": 220,
         "type": "Milkshake-type icecream",
         "ingredients": ["Peach Syrup", "Mango Chunks", "Vanilla Base"],
-        "image": "https://priyansht.github.io/26S-JavaScript-02-Week10/images/peach-mango.svg"
-    }, {
+        "image": "https://priyansht.github.io/26S-JavaScript-02-Week10/images/peach-mango.svg",
+         "rating": 4.2
+
+        }, {
         "name": "Strawberry Sprinkle",
         "calories": 240,
         "type": "Icecream",
         "ingredients": ["Strawberry Syrup", "Strawberry Chunks", "Sprinkle", "Chocolate Base"],
-        "image": "https://priyansht.github.io/26S-JavaScript-02-Week10/images/strawberry-sprinkle.svg"
+        "image": "https://priyansht.github.io/26S-JavaScript-02-Week10/images/strawberry-sprinkle.svg",
+         "rating": 5
     }, 
     
     {
@@ -29,7 +33,8 @@
     "calories": 240,
     "type": "Icecream",
     "ingredients": ["Mint Ice Cream", "Chocolate Chips", "Vanilla Extract"],
-    "image": "images/ice-cream-xtra1.svg"
+    "image": "images/ice-cream-xtra1.svg",
+     "rating": 4.5
 },{
       "name": "Cookies and Cream",
       "calories": 280,
@@ -39,7 +44,8 @@
         "Chocolate Cookie Crumbs",
         "Whipped Cream"
       ],
-      "image": "images/ice-cream-xtra2.svg"
+      "image": "images/ice-cream-xtra2.svg",
+       "rating": 5
     }
 
 ]
