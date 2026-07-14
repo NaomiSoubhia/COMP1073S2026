@@ -30,6 +30,17 @@
     "type": "Icecream",
     "ingredients": ["Mint Ice Cream", "Chocolate Chips", "Vanilla Extract"],
     "image": "images/ice-cream-xtra1.svg"
-}
+},{
+      "name": "Cookies and Cream",
+      "calories": 280,
+      "type": "Icecream",
+      "ingredients": [
+        "Vanilla Ice Cream",
+        "Chocolate Cookie Crumbs",
+        "Whipped Cream"
+      ],
+      "image": "images/ice-cream-xtra2.svg"
+    }
+
 ]
 }
