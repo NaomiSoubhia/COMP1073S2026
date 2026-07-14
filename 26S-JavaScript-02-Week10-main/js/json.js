@@ -11,16 +11,16 @@ async function populate() {
 
     // STEP 5: Use the new URL to create a new request object
     let request = new Request(url);
-    
+
     // STEP 6: Make a network request with the fetch() function, which returns a Response object
     let response = await fetch(request);
-    
+
     // STEP 7: Capture the returned Response object and covert to a JSON object using json()
     let responseJson = await response.json();
-    
+
     // STEP 8: Output the iScream JSON object to the console
     console.log(responseJson);
-    
+
     // STEP 9a: Invoke the populateHeader function here, then build it below
     populateHeader(responseJson);
 
@@ -32,14 +32,14 @@ async function populate() {
 populate();
 
 /* STEP 9b: Build out the populateHeader() function */
-function populateHeader(json){
+function populateHeader(json) {
     // Create the H1 element
     let h1 = document.createElement("h1"); // <h1></h1>
     let para = document.createElement("p"); // <p></p>
 
     // Grab the company name from the JSON object and use it for the text node
     h1.textContent = json.companyName;
-    para.textContent = `Head Office: ${json.headOffice}, est. ${json.established}, status: ${ json.active ? "Active" : "Inactive" }`
+    para.textContent = `Head Office: ${json.headOffice}, est. ${json.established}, status: ${json.active ? "Active" : "Inactive"}`
 
     // Inject the complete H1 element into the DOM, inside the HEADER
     header.appendChild(h1);
@@ -48,7 +48,7 @@ function populateHeader(json){
 
 
 /* STEP 10b: Assemble the showTopFlavors() function */
-function showTopFlavors(json){
+function showTopFlavors(json) {
     // STEP 10c: Bind the JSON topFlavors object to a var
     let topFlavors = json.topFlavors;
     // console.log(topFlavors);
@@ -68,6 +68,7 @@ function showTopFlavors(json){
         h2.textContent = topFlavors[i].name;
         p1.textContent = "Type: " + topFlavors[i].type;
         p2.textContent = "Calories: " + topFlavors[i].calories;
+        p3.textContent = "Rating: " + topFlavors[i].rating;
         image.setAttribute("src", topFlavors[i].image);
 
         // STEP 10g: Build a loop for the ingredients array in the JSON
@@ -78,15 +79,15 @@ function showTopFlavors(json){
             listItem.textContent = ingredients[j];
             list.appendChild(listItem);
         }
-        p3.textContent = "Rating: " + topFlavors[i].rating;
+
         // STEP 10i: Append each complete ARTICLE element to the SECTION element
         article.appendChild(h2);
         article.appendChild(p1);
         article.appendChild(p2);
-         article.appendChild(p3);
+        article.appendChild(p3);
         article.appendChild(list);
         article.appendChild(image);
-        
+
         section.appendChild(article);
     }
 }
