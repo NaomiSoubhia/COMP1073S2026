@@ -15,3 +15,35 @@ header {
     padding:30px;
 }
 
+
+
+/* Search  */
+.search-area {
+    text-align:center;
+    margin:30px;
+}
+
+
+input {
+    width:300px;
+    padding:12px;
+    border-radius:10px;
+    border:1px solid gray;
+}
+
+
+button {
+    padding:12px 20px;
+    border:none;
+    border-radius:10px;
+    background:#8376e1;
+    color:white;
+    cursor:pointer;
+}
+
+
+button:hover {
+    background:#5f05ee;
+}
+
+
