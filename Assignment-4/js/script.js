@@ -58,6 +58,16 @@ function displayBooks(books){
     //Loop throw array books
     books.forEach(book => {
     // create new cards
+
+    const info = book.volumeInfo;
+
+    //Create card
+    const card =document.createElement("div");
+    card.classList.add("bookCard");
+    
+    //Append in the html
+    container.appendChild(card);
+
 });
 
 }
