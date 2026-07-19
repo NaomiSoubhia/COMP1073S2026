@@ -49,4 +49,15 @@ async function searchBooks(){
 //Display data collected from the API
 function displayBooks(books){
 
+    //Get the container html
+    const container = document.getElementById("bookContainer");
+
+    //Clear the previous cards
+    container.innerHTML="";
+
+    //Loop throw array books
+    books.forEach(book => {
+    // create new cards
+});
+
 }
