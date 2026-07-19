@@ -21,4 +21,16 @@ button.addEventListener("click",searchBooks);
 // Function that connects to API
 async function searchBooks(){
 
+    //Get the title entered by the user
+     const search = document.getElementById("bookSearch").value;
+
+     //If the user don't enter any title
+      if(search === ""){
+        //Alert to the user
+        alert("Please enter a book name");
+        return;
+    }
+
+
+
 }
