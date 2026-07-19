@@ -45,3 +45,8 @@ async function searchBooks(){
     }
 
 }
+
+//Display data collected from the API
+function displayBooks(books){
+
+}
