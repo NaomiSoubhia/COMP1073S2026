@@ -10,3 +10,15 @@ const API_URL =`https://www.googleapis.com/books/v1/volumes?q=`;
 
 //fetch(API_URL + search + "&key=" + API_KEY);
 
+// Search button element
+const button = document.getElementById("searchBtn");
+
+
+//Event listener for the button searchBooks
+button.addEventListener("click",searchBooks);
+
+
+// Function that connects to API
+async function searchBooks(){
+
+}
