@@ -31,14 +31,17 @@ async function searchBooks(){
         return;
     
     }
-    // Replace spaces with "+"
-    search = search.replace(/\s+/g, "+");
+    // Replace spaces with "+" and lower case
+    search = search.replace(/\s+/g, "+").toLowerCase();
+
     // Try: Connection with the API + Search book title
     try{
 
         //Connection
         const response = await fetch(API_URL + search + "&key=" + API_KEY);
 
+        //Just to test
+        console.log(response);
         //Converts the JSON response into a JS object.
         const data = await response.json();
         //Call my function that receives an array (items)
@@ -67,10 +70,21 @@ function displayBooks(books){
 
     const info = book.volumeInfo;
 
+
     //Create card
     const card =document.createElement("div");
     card.classList.add("bookCard");
     
+
+    //Book cover
+    let image;
+
+    if (info.imageLinks) {
+        image = info.imageLinks.thumbnail;
+    } else {
+        image = "images/imgNotFound.png";
+    }
+
     //Append in the html
     container.appendChild(card);
 
