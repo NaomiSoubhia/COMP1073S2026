@@ -8,7 +8,7 @@ const API_KEY = "AIzaSyAy8_o6Tpu9KIvHFD6Oaorerjtb6N2m77o";
 //URL
 const API_URL =`https://www.googleapis.com/books/v1/volumes?q=`;
 
-//fetch(API_URL + search + "&key=" + API_KEY);
+
 
 // Search button element
 const button = document.getElementById("searchBtn");
@@ -22,17 +22,23 @@ button.addEventListener("click",searchBooks);
 async function searchBooks(){
 
     //Get the title entered by the user
-     const search = document.getElementById("bookSearch").value;
+     let search = document.getElementById("bookSearch").value.trim();
 
      //If the user don't enter any title
       if(search === ""){
         //Alert to the user
         alert("Please enter a book name");
         return;
+    
     }
-
+    // Replace spaces with "+"
+    search = search.replace(/\s+/g, "+");
     // Try: Connection with the API + Search book title
     try{
+
+        //Connection
+        const response = await fetch(API_URL + search + "&key=" + API_KEY);
+
         //Converts the JSON response into a JS object.
         const data = await response.json();
         //Call my function that receives an array (items)
