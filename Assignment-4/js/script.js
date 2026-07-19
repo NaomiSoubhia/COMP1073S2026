@@ -31,6 +31,17 @@ async function searchBooks(){
         return;
     }
 
+    // Try: Connection with the API + Search book title
+    try{
+        //Converts the JSON response into a JS object.
+        const data = await response.json();
+        //Call my function that receives an array (items)
+         displayBooks(data.items);
 
+    }
+
+    catch(error){
+        console.log(error);
+    }
 
 }
