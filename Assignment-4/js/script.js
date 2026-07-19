@@ -85,6 +85,31 @@ function displayBooks(books){
         image = "images/imgNotFound.png";
     }
 
+
+    //Creating the html card passing the infos collected from the API
+    card.innerHTML = `
+        <img src="${image}">
+
+        <h3> ${info.title} </h3>
+
+        <p> <strong>Author:</strong>
+        ${info.authors ? info.authors.join(", ") : "Unknown"}
+        </p>
+
+        <p> <strong>Category:</strong>
+        ${info.categories ? info.categories[0] : "N/A"}
+        </p>
+
+        <p class="description">
+        ${info.description ?
+        info.description.substring(0,200) :
+        "No description available"}
+        </p>
+
+        <a href="${info.previewLink}" target="_blank">
+        Preview Book
+        </a> `;
+
     //Append in the html
     container.appendChild(card);
 
