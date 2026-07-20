@@ -45,7 +45,12 @@ async function searchBooks(){
         //Converts the JSON response into a JS object.
         const data = await response.json();
         //Call my function that receives an array (items)
-         displayBooks(data.items);
+         if(data.items){
+            displayBooks(data.items);
+        }
+        else{
+            alert("No books found or API error");
+        }
 
     }
 
