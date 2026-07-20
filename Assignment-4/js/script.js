@@ -6,7 +6,7 @@ infos.innerHTML = "Student: Naomi Soubhia Doi - 200645137";
 const API_KEY = "AIzaSyAy8_o6Tpu9KIvHFD6Oaorerjtb6N2m77o";
 
 //URL
-const API_URL =`https://www.googleapis.com/books/v1/volumes?q=`;
+const API_URL = `https://www.googleapis.com/books/v1/volumes?q=`;
 
 
 
@@ -15,84 +15,85 @@ const button = document.getElementById("searchBtn");
 
 
 //Event listener for the button searchBooks
-button.addEventListener("click",searchBooks);
+button.addEventListener("click", searchBooks);
 
 
 // Function that connects to API
-async function searchBooks(){
+async function searchBooks() {
 
     //Get the title entered by the user
-     let search = document.getElementById("bookSearch").value.trim();
+    let search = document.getElementById("bookSearch").value.trim();
 
-     //If the user don't enter any title
-      if(search === ""){
+    //If the user don't enter any title
+    if (search === "") {
         //Alert to the user
         alert("Please enter a book name");
         return;
-    
+
     }
     // Replace spaces with "+" and lower case
     search = search.replace(/\s+/g, "+").toLowerCase();
 
     // Try: Connection with the API + Search book title
-    try{
+    try {
 
         //Connection
         const response = await fetch(API_URL + search + "&key=" + API_KEY);
 
-        //Just to test
-        console.log(response);
-        //Converts the JSON response into a JS object.
-        const data = await response.json();
-        //Call my function that receives an array (items)
-         if(data.items){
+
+        if (response.ok) {
+            // Process the response
+            const data = await response.json();
+            //Call my function that receives an array (items)
             displayBooks(data.items);
-        }
-        else{
-            alert("No books found or API error");
+        } else if (response.status === 503) {
+            alert("The service is temporarily unavailable (503). Please click the Search button again in a few moments.");
+        } else {
+            alert("No books found or an API error occurred.");
         }
 
     }
 
-    catch(error){
+    catch (error) {
         console.log(error);
     }
 
 }
 
 //Display data collected from the API
-function displayBooks(books){
+function displayBooks(books) {
 
     //Get the container html
     const container = document.getElementById("bookContainer");
 
     //Clear the previous cards
-    container.innerHTML="";
+    container.innerHTML = "";
+
 
     //Loop throw array books
     books.forEach(book => {
-    // create new cards
+        // create new cards
 
-    const info = book.volumeInfo;
-
-
-    //Create card
-    const card =document.createElement("div");
-    card.classList.add("bookCard");
-    
-
-    //Book cover
-    let image;
-
-    if (info.imageLinks) {
-        image = info.imageLinks.thumbnail;
-    } else {
-        image = "images/imgNotFound.png";
-    }
+        const info = book.volumeInfo;
 
 
-    //Creating the html card passing the infos collected from the API
-    card.innerHTML = `
+        //Create card
+        const card = document.createElement("div");
+        card.classList.add("bookCard");
+
+
+        //Book cover
+        let image;
+
+        if (info.imageLinks) {
+            image = info.imageLinks.thumbnail;
+        } else {
+            image = "images/imgNotFound.png";
+        }
+
+
+        //Creating the html card passing the infos collected from the API
+        card.innerHTML = `
         <img src="${image}">
 
         <h3> ${info.title} </h3>
@@ -107,17 +108,17 @@ function displayBooks(books){
 
         <p class="description">
         ${info.description ?
-        info.description.substring(0,200) :
-        "No description available"}
+                info.description.substring(0, 200) :
+                "No description available"}
         </p>
 
         <a href="${info.previewLink}" target="_blank">
         Preview Book
         </a> `;
 
-    //Append in the html
-    container.appendChild(card);
+        //Append in the html
+        container.appendChild(card);
 
-});
+    });
 
 }
