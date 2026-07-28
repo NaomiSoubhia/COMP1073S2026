@@ -127,6 +127,49 @@ function displayMessage(json){
     results.appendChild(para);
 }
 
+function sendFollowUp(){
+
+    let followUp = followUpMessage.value;
+
+    conversationHistory.push({
+        role: "user",
+        content: followUp
+    });
+
+    let url = `${baseURL}/api/claude/messages`;
+
+    let requestBody = {
+        max_tokens: maxTokens,
+        messages: conversationHistory,
+        model: "claude-sonnet-5"
+    };
+
+
+    fetch(url, {
+        method: "POST",
+        headers: {
+            "X-Student-API-Key": studentApiKey,
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(requestBody)
+    })
+    .then(response => response.json())
+    .then(json => {
+
+        conversationHistory.push({
+            role: "assistant",
+            content: json.content[0].text
+        });
+
+
+        displayFollowUp(json);
+        followUpMessage.value = "";
+
+    });
+
+}
+
+
 // LAB EXTENSION: Multi-Message Chat Feature
 // After completing the basic implementation, extend the functionality to support conversation history:
 
