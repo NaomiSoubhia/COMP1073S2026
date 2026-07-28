@@ -16,6 +16,20 @@ form {
 }
 
 
-#follow-up-section{
-	display: none;
+.assistant-message {
+    background: #eee;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+
+.follow-up-message {
+    background: #d9f3ff;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+
+#follow-up-section {
+    margin-top: 20px;
 }

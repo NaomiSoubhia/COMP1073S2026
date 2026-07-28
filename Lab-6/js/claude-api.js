@@ -119,6 +119,21 @@ function sendChatMessage(){
     });
 }
 
+function displayMessage(json){
+
+    let div = document.createElement("div");
+
+    div.classList.add("assistant-message");
+
+    div.innerHTML = `
+        <strong>Claude:</strong>
+        <p>${json.content[0].text}</p>
+    `;
+
+    results.appendChild(div);
+
+}
+
 function displayFollowUp(json){
 
     let div = document.createElement("div");
