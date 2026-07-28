@@ -119,12 +119,21 @@ function sendChatMessage(){
     });
 }
 
-function displayMessage(json){
-    console.log(json);
+function displayFollowUp(json){
 
-    let para = document.createElement("p"); // <p></p>
-    para.textContent = `Assistant: ${json.content[0].text}`;
-    results.appendChild(para);
+    let div = document.createElement("div");
+
+    div.classList.add("follow-up-message");
+
+
+    div.innerHTML = `
+        <strong>Claude Follow-up:</strong>
+        <p>${json.content[0].text}</p>
+    `;
+
+
+    results.appendChild(div);
+
 }
 
 function sendFollowUp(){
